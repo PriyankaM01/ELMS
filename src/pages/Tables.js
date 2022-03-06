@@ -19,13 +19,7 @@ import { apiUrl } from "../url/url";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-// Images
-import ava1 from "../assets/images/logo-shopify.svg";
-import ava2 from "../assets/images/logo-atlassian.svg";
-import ava3 from "../assets/images/logo-slack.svg";
-import ava5 from "../assets/images/logo-jira.svg";
-import ava6 from "../assets/images/logo-invision.svg";
-import pencil from "../assets/images/pencil.svg";
+
 
 const { Title } = Typography;
 
@@ -40,8 +34,7 @@ function Tables() {
           .get(`${apiUrl}/emps`)
           .then((response) => {
             message.success({ content: "List of Employee" });
-            // setSpin(false);
-            console.log("response get is ", response);
+            
             let result  = response.data.map(empobj=>({
               id:empobj.id,
               name:empobj.name,
