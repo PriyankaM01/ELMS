@@ -30,7 +30,6 @@ import pencil from "../assets/images/pencil.svg";
 const { Title } = Typography;
 
 
-
 function Tables() {
 
   const [example, setExample] = useState([]);
